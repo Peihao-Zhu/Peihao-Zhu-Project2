@@ -27,6 +27,7 @@
   background-color: rgb(205, 173, 132);
 }
 .game-btn {
+  border-right: 1px solid white;
   width: 200px;
   padding: 20px;
   background-color: rgb(103, 102, 102);
