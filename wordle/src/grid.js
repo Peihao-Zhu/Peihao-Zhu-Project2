@@ -6,6 +6,7 @@ import './grid.css'
 import WordleContext from './WordleContext'
 
 function Grid(props) {
+  // fetch the global variables in context
   const {
     gridDataObject,
     rows,
@@ -17,27 +18,23 @@ function Grid(props) {
   } = useContext(WordleContext)
 
   const [gridData, setGridData] = gridDataObject
-  // const [gridData, setGridData] = useState(
-  //   createGridData(props.rows, props.cols),
-  // )
   //id:rowIndex*props.cols+colIndex value: 0,1,2
   const [boxStatus, setBoxStatus] = useState([])
   const [attempt, setAttempt] = useState(props.rows)
   const [answer, handleAnswer] = answerObject
   const [row, setRow] = rowObject
   const [col, setCol] = colObject
-  // const answer = props.answerWord
-  console.log('answer + ' + answer)
 
   function handleGridChange(newWord) {
     setGridData(newWord)
   }
 
+  // each time we hit a button, process corresponding logic here
   function handleButton(e) {
     let curWord = [...gridData]
-    console.log(col + ' ' + row + ' ' + curWord)
     switch (e) {
-      case 'Enter': // CR
+      // check the word
+      case 'Enter':
         if (col === cols) {
           if (checkLetters(curWord, row, answer)) {
             // congraduate users and exit the program
@@ -80,6 +77,7 @@ function Grid(props) {
           setCol(col - 1)
         }
         break
+      // english letters
       default:
         if (col === cols) {
           return
@@ -101,6 +99,7 @@ function Grid(props) {
     handleAnswer(mode)
   }
 
+  // check the word in row of curWord board with the answer
   function checkLetters(curWord, row, answer) {
     const map = new Map()
     //items in the set have been compared
@@ -109,8 +108,7 @@ function Grid(props) {
     let arrOfBox = []
     addItemInMap(map, answer)
 
-    for (let i = 0; i < curWord.length; i++) {
-      console.log(row + ' ' + i + ' ' + curWord)
+    for (let i = 0; i < cols; i++) {
       if (curWord[row][i] === answer[i]) {
         if (map.get(answer[i]) > 0) {
           //key: rowIndex*props.cols+colIndex,  location and value correct
@@ -122,7 +120,7 @@ function Grid(props) {
         flag = false
       }
     }
-    for (let j = 0; j < curWord.length; j++) {
+    for (let j = 0; j < cols; j++) {
       if (set.has(j)) continue
       for (let k = 0; k < answer.length; k++) {
         //values are same but location are different
@@ -138,7 +136,6 @@ function Grid(props) {
       }
     }
     setBoxStatus((prevBoxStatus) => [...prevBoxStatus, ...arrOfBox])
-
     return flag
   }
 

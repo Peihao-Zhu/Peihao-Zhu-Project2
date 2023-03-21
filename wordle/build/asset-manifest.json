@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.078a00fb.css",
+    "main.js": "/static/js/main.e0a9561c.js",
+    "static/js/787.e01666d6.chunk.js": "/static/js/787.e01666d6.chunk.js",
+    "static/media/wordle-game.png": "/static/media/wordle-game.69bf6b9fc9dfd06f24e2.png",
+    "index.html": "/index.html",
+    "main.078a00fb.css.map": "/static/css/main.078a00fb.css.map",
+    "main.e0a9561c.js.map": "/static/js/main.e0a9561c.js.map",
+    "787.e01666d6.chunk.js.map": "/static/js/787.e01666d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.078a00fb.css",
+    "static/js/main.e0a9561c.js"
+  ]
+}

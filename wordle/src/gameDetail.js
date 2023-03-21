@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Grid from './grid'
 import WordleContext from './WordleContext'
 
+// Got these words from ChatGPT
 const normalWords = [
   'NUMBER',
   'PEOPLE',
@@ -15,16 +16,16 @@ const normalWords = [
   'BATTLE',
 ]
 const hardWords = [
-  'abalone',
-  'bandana',
-  'chicken',
-  'dolphin',
-  'eclipse',
-  'furnace',
-  'gazelle',
-  'haddock',
-  'inquiry',
-  'javelin',
+  'ABALONE',
+  'BANDANA',
+  'CHICKEN',
+  'DOLPHIN',
+  'ECLIPSE',
+  'FURNACE',
+  'GAZELLE',
+  'HADDOCK',
+  'INQUIRY',
+  'JAVELIN',
 ]
 
 function GameDetail(props) {
@@ -32,10 +33,6 @@ function GameDetail(props) {
   const [row, setRow] = useState(0)
   const [col, setCol] = useState(0)
   const [answer, setAnswer] = useState(GenerateAnswer(props.mode))
-
-  // const updateGridData = (newData) => {
-  //   setGridData(newData)
-  // }
 
   function createGridData(rows, cols) {
     // Initialize grid data to empty strings
@@ -46,7 +43,6 @@ function GameDetail(props) {
   }
 
   function GenerateAnswer(mode) {
-    // Got these words from ChatGPT
     return mode === 'normal'
       ? normalWords[Math.floor(Math.random() * normalWords.length)]
       : hardWords[Math.floor(Math.random() * hardWords.length)]

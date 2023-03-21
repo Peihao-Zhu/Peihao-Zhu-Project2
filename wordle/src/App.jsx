@@ -4,10 +4,12 @@ import Rule from './rule.js'
 import Home from './home'
 import Game from './game'
 import GameDetail from './gameDetail'
+import Navigation from './navigationbar'
 
 function App() {
   return (
     <BrowserRouter>
+      <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="rule" element={<Rule />} />

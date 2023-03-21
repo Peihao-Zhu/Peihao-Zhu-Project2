@@ -1,0 +1,22 @@
+.Navigation {
+  width: 30%;
+}
+
+.navigation-box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.game-btn {
+  margin: 0;
+  width: 20px;
+  background-color: rgb(69, 67, 67);
+  color: rgb(219, 216, 216);
+  font-size: x-large;
+  border-radius: 0;
+}
+
+.game-btn:hover {
+  background-color: rgb(168, 163, 163);
+}
