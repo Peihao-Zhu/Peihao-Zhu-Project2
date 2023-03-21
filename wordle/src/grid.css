@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(242, 238, 238);
+  height: 2000px;
+}
+
+.game-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  width: max-content;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid .row {
+  width: max-content;
+}
+.rowItem {
+  font-size: xx-large;
+  border: 2px solid rgb(86, 84, 84);
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+  margin-left: 15px;
+}
+.my-game-keyboard {
+  width: 800px;
+  height: 200px;
+}
+.reset-btn {
+  background-color: rgb(6, 6, 6);
+  padding: 15px;
+  color: rgb(247, 243, 243);
+}
+.rowItem[data-state='yellow'] {
+  background-color: yellow;
+}
+.rowItem[data-state='green'] {
+  background-color: green;
+}

@@ -1,0 +1,38 @@
+.difficult-mode {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding-top: 20px;
+}
+.game-box {
+  padding-top: 200px;
+}
+.Game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.difficulty {
+  color: rgb(84, 81, 81);
+  text-align: center;
+}
+
+.Mode {
+  width: 30%;
+  height: 10%;
+  font-size: xx-large;
+}
+
+.Mode:hover {
+  background-color: rgb(205, 173, 132);
+}
+.game-btn {
+  width: 200px;
+  padding: 20px;
+  background-color: rgb(103, 102, 102);
+  color: rgb(219, 216, 216);
+  font-size: xx-large;
+}
+.game-btn:hover {
+  background-color: rgb(168, 163, 163);
+}

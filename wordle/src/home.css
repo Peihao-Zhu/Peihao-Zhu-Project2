@@ -1,0 +1,30 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: rgb(84, 81, 81);
+}
+ul li {
+  list-style-type: none;
+}
+ul li a {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  text-decoration: none;
+  background-color: rgb(103, 102, 102);
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+}
+ul li a:hover {
+  background-color: rgb(168, 163, 163);
+}
+.home-box {
+  padding-top: 200px;
+  text-align: center;
+}
