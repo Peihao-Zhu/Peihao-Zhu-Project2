@@ -144,7 +144,7 @@ function Grid(props) {
 
   function updateColorOfBox(rowIndex, cols, colIndex) {
     let status = 'none'
-    boxStatus.map((item) => {
+    boxStatus.forEach((item) => {
       if (item.id === rowIndex * cols + colIndex) {
         status = item.value === '1' ? 'yellow' : 'green'
       }
